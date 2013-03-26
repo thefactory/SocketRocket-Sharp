@@ -29,13 +29,13 @@ namespace SocketRocket
 		string Protocol { get; }
 		
 		[Export ("initWithURLRequest:protocols:")]
-		IntPtr Constructor (NSUrlRequest request, NSArray protocols);
+		IntPtr Constructor (NSUrlRequest request, string[] protocols);
 		
 		[Export ("initWithURLRequest:")]
 		IntPtr Constructor (NSUrlRequest request);
 		
 		[Export ("initWithURL:protocols:")]
-		IntPtr Constructor (NSUrl url, NSArray protocols);
+		IntPtr Constructor (NSUrl url, string[] protocols);
 		
 		[Export ("initWithURL:")]
 		IntPtr Constructor (NSUrl url);
@@ -78,7 +78,7 @@ namespace SocketRocket
 		
 		[Export ("webSocket:didFailWithError:")]
 		[EventArgs("SRError")]
-		void Error (SRWebSocket webSocket, NSError error_);
+		void Error (SRWebSocket webSocket, NSError err);
 		
 		[Export ("webSocket:didCloseWithCode:reason:wasClean:")]
 		[EventArgs("SRClosed")]
