@@ -56,7 +56,7 @@ namespace SocketRocket {
         void Close();
 
         [Export("closeWithCode:reason:")]
-        void CloseWithCode(int code, string reason);
+        void CloseWithCode(int code, [NullAllowed] string reason);
 
         [Export("send:")]
         void Send(NSObject data);
