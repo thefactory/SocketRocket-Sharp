@@ -62,7 +62,7 @@ namespace SocketRocket {
         void Send(NSObject data);
     }
 
-    [BaseType(typeof(NSObject)), Model]
+    [BaseType(typeof(NSObject)), Model, Protocol]
     public partial interface SRWebSocketDelegate {
         [Export("webSocket:didReceiveMessage:")]
         [EventArgs("SRMessageReceived")]
